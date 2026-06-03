@@ -17,6 +17,14 @@
   <body>
     <header class="topbar">
       <a class="brand" href="#" aria-label="Sarah e Gabriel">Sarah &amp; Gabriel</a>
+      <label class="search-box" role="search" for="gift-search">
+        <span aria-hidden="true">&#x2315;</span>
+        <input id="gift-search" type="search" placeholder="Buscar presente" autocomplete="off" />
+      </label>
+      <div class="cart-pill" aria-label="Lista de presentes">
+        <span aria-hidden="true">&#9825;</span>
+        <span>Lista dos noivos</span>
+      </div>
     </header>
 
     <main>
@@ -34,12 +42,17 @@
 
       <section class="gift-section" aria-label="Presentes dispon&iacute;veis">
         <div class="section-heading">
+          <p class="section-tag">Presentes mais escolhidos</p>
           <h2>Com carinho, escolha o seu presente</h2>
           <p>
             Cada contribui&ccedil;&atilde;o ajuda a construir nosso lar com amor, cuidado e
             boas mem&oacute;rias.
           </p>
         </div>
+
+        <p class="empty-state" id="empty-state" hidden>
+          Nenhum presente encontrado.
+        </p>
 
         <div class="gift-grid">
           <article class="gift-card">
@@ -179,16 +192,25 @@
 
     <dialog class="qr-modal" id="qr-modal" aria-labelledby="modal-title">
       <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
-      <p class="modal-kicker">Presente selecionado</p>
+      <p class="modal-kicker">Checkout do presente</p>
       <h2 id="modal-title">Nome do presente</h2>
       <p class="modal-price" id="modal-price">R$ 0,00</p>
+      <div class="checkout-steps" aria-label="Etapas do presente">
+        <span class="checkout-step is-active" data-step-indicator="qr">1. Pix</span>
+        <span class="checkout-step" data-step-indicator="message">2. Mensagem</span>
+      </div>
       <div class="gift-step is-active" data-step="qr">
+        <div class="order-summary">
+          <span>Resumo</span>
+          <strong id="summary-item">Presente</strong>
+          <small id="summary-price">R$ 0,00</small>
+        </div>
         <div class="qr-frame">
           <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code do presente" />
         </div>
         <p class="modal-help">
-          Escaneie o QR Code e, depois, confirme para deixar uma mensagem aos
-          noivos.
+          Escaneie o QR Code para fazer o Pix. Depois que concluir, confirme
+          para deixar uma mensagem aos noivos.
         </p>
         <p class="scan-wait" id="scan-wait" aria-live="polite"></p>
         <button class="confirm-button" id="confirm-scan" type="button">
@@ -196,6 +218,9 @@
         </button>
       </div>
       <form class="gift-step message-form" id="message-form" data-step="message">
+        <div class="success-note">
+          Pix escaneado. Agora envie seu carinho junto com o presente.
+        </div>
         <label for="guest-message">Mensagem para os noivos</label>
         <textarea
           id="guest-message"

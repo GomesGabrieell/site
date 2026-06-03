@@ -7,6 +7,10 @@ const confirmScanButton = document.querySelector("#confirm-scan");
 const scanWait = document.querySelector("#scan-wait");
 const messageForm = document.querySelector("#message-form");
 const guestMessage = document.querySelector("#guest-message");
+const giftSearch = document.querySelector("#gift-search");
+const emptyState = document.querySelector("#empty-state");
+const summaryItem = document.querySelector("#summary-item");
+const summaryPrice = document.querySelector("#summary-price");
 const placeholderQr = "assets/qrcodes/placeholder.svg";
 const whatsappNumbers = ["5531971131979", "553197862970"];
 const scanDelaySeconds = 10;
@@ -20,6 +24,9 @@ let scanDelayTimer = null;
 const showStep = (stepName) => {
   modal.querySelectorAll(".gift-step").forEach((step) => {
     step.classList.toggle("is-active", step.dataset.step === stepName);
+  });
+  modal.querySelectorAll(".checkout-step").forEach((step) => {
+    step.classList.toggle("is-active", step.dataset.stepIndicator === stepName);
   });
 };
 
@@ -71,12 +78,32 @@ document.querySelectorAll(".gift-button").forEach((button) => {
 
     modalTitle.textContent = selectedGift.name;
     modalPrice.textContent = selectedGift.price;
+    summaryItem.textContent = selectedGift.name;
+    summaryPrice.textContent = selectedGift.price;
     modalQr.src = button.dataset.qr;
     modalQr.alt = `QR Code para presentear com ${selectedGift.name}`;
     resetModal();
     startScanDelay();
     modal.showModal();
   });
+});
+
+giftSearch.addEventListener("input", () => {
+  const query = giftSearch.value.trim().toLowerCase();
+  let visibleCards = 0;
+
+  document.querySelectorAll(".gift-card").forEach((card) => {
+    const name = card.querySelector("h3").textContent.toLowerCase();
+    const isVisible = name.includes(query);
+
+    card.hidden = !isVisible;
+
+    if (isVisible) {
+      visibleCards += 1;
+    }
+  });
+
+  emptyState.hidden = visibleCards > 0;
 });
 
 confirmScanButton.addEventListener("click", () => {
