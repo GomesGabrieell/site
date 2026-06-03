@@ -1,0 +1,62 @@
+[
+  {
+    "nome": "Air Fryer",
+    "valor": 350,
+    "qrcode": "350.png"
+  },
+  {
+    "nome": "Liquidificador",
+    "valor": 200,
+    "qrcode": "200.png"
+  },
+  {
+    "nome": "Jogo de Panelas",
+    "valor": 300,
+    "qrcode": "300.png"
+  },
+  {
+    "nome": "Cafeteira",
+    "valor": 180,
+    "qrcode": "180.png"
+  },
+  {
+    "nome": "Micro-ondas",
+    "valor": 450,
+    "qrcode": "450.png"
+  },
+  {
+    "nome": "Aspirador",
+    "valor": 250,
+    "qrcode": "250.png"
+  },
+  {
+    "nome": "Roupa de Cama",
+    "valor": 220,
+    "qrcode": "220.png"
+  },
+  {
+    "nome": "Jantar Especial",
+    "valor": 160,
+    "qrcode": "160.png"
+  },
+  {
+    "nome": "Faqueiro",
+    "valor": 140,
+    "qrcode": "140.png"
+  },
+  {
+    "nome": "Toalhas",
+    "valor": 120,
+    "qrcode": "120.png"
+  },
+  {
+    "nome": "Ferro de Passar",
+    "valor": 150,
+    "qrcode": "150.png"
+  },
+  {
+    "nome": "Cotas da Lua de Mel",
+    "valor": 100,
+    "qrcode": "100.png"
+  }
+]
