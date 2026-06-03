@@ -25,6 +25,12 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+button,
+input,
+textarea {
+  font: inherit;
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -166,7 +172,7 @@ body {
 
 .gift-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
@@ -271,6 +277,7 @@ body {
   font-family: inherit;
   font-size: 13px;
   font-weight: 800;
+  text-align: center;
 }
 
 .gift-button:hover {
@@ -279,6 +286,7 @@ body {
 
 .qr-modal {
   width: min(440px, calc(100% - 28px));
+  max-height: calc(100dvh - 28px);
   padding: 24px;
   border: 0;
   border-radius: 8px;
@@ -286,6 +294,7 @@ body {
   color: var(--ink);
   text-align: center;
   box-shadow: 0 26px 72px rgba(25, 28, 24, 0.28);
+  overflow-y: auto;
 }
 
 .qr-modal::backdrop {
@@ -332,7 +341,7 @@ body {
 
 .order-summary {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 4px 12px;
   margin-bottom: 16px;
   padding: 12px;
@@ -351,6 +360,8 @@ body {
 }
 
 .order-summary strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: 14px;
 }
 
@@ -363,7 +374,7 @@ body {
 .qr-frame {
   display: grid;
   place-items: center;
-  width: min(250px, 100%);
+  width: min(250px, 72vw, 100%);
   aspect-ratio: 1 / 1;
   margin: 0 auto;
   padding: 14px;
@@ -448,7 +459,7 @@ body {
 .message-form textarea {
   display: block;
   width: 100%;
-  min-height: 132px;
+  min-height: 112px;
   resize: vertical;
   padding: 12px;
   border: 1px solid var(--line);
@@ -466,8 +477,8 @@ body {
 }
 
 @media (max-width: 980px) {
-  .gift-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .topbar {
+    padding-inline: 24px;
   }
 }
 
@@ -499,29 +510,157 @@ body {
   }
 
   .hero-inner {
-    padding: 54px 0 42px;
+    padding: 44px 0 34px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p:last-child {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .gift-section {
+    padding: 24px 0 56px;
+  }
+
+  .section-heading {
+    padding: 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+    line-height: 1.05;
   }
 
   .gift-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 
   .gift-card {
     padding: 10px;
   }
+
+  .gift-info {
+    min-height: 78px;
+  }
+
+  .gift-info h3 {
+    font-size: 15px;
+  }
+
+  .gift-info p {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 460px) {
+  .topbar {
+    min-height: 60px;
+    padding: 10px 12px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .cart-pill {
+    min-height: 34px;
+    padding: 0 11px;
+  }
+
   .cart-pill span:last-child {
     display: none;
   }
 
+  .search-box {
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .hero-inner,
+  .gift-section {
+    width: min(100% - 24px, 420px);
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
   .gift-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .gift-card {
     max-width: none;
+  }
+
+  .gift-card img {
+    aspect-ratio: 1 / 0.7;
+  }
+
+  .qr-modal {
+    width: calc(100% - 18px);
+    max-height: calc(100dvh - 18px);
+    padding: 20px 16px;
+  }
+
+  .modal-close {
+    top: 8px;
+    right: 8px;
+  }
+
+  .modal-kicker {
+    padding-right: 28px;
+  }
+
+  .qr-modal h2 {
+    font-size: 20px;
+  }
+
+  .modal-price {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+
+  .order-summary {
+    padding: 10px;
+  }
+
+  .qr-frame {
+    width: min(220px, 74vw);
+    padding: 12px;
+  }
+
+  .modal-help,
+  .success-note,
+  .message-form textarea {
+    font-size: 13px;
+  }
+
+  .confirm-button {
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 340px) {
+  .gift-info p {
+    font-size: 18px;
+  }
+
+  .order-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary small {
+    justify-self: start;
   }
 }
