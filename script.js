@@ -3,8 +3,6 @@ const modalTitle = document.querySelector("#modal-title");
 const modalPrice = document.querySelector("#modal-price");
 const modalQr = document.querySelector("#modal-qr");
 const closeButton = document.querySelector(".modal-close");
-const confirmScanButton = document.querySelector("#confirm-scan");
-const scanWait = document.querySelector("#scan-wait");
 const messageForm = document.querySelector("#message-form");
 const guestMessage = document.querySelector("#guest-message");
 const giftSearch = document.querySelector("#gift-search");
@@ -13,51 +11,14 @@ const summaryItem = document.querySelector("#summary-item");
 const summaryPrice = document.querySelector("#summary-price");
 const placeholderQr = "assets/qrcodes/placeholder.svg";
 const whatsappNumbers = ["5531971131979", "553197862970"];
-const scanDelaySeconds = 10;
 
 let selectedGift = {
   name: "",
   price: "",
 };
-let scanDelayTimer = null;
-
-const showStep = (stepName) => {
-  modal.querySelectorAll(".gift-step").forEach((step) => {
-    step.classList.toggle("is-active", step.dataset.step === stepName);
-  });
-  modal.querySelectorAll(".checkout-step").forEach((step) => {
-    step.classList.toggle("is-active", step.dataset.stepIndicator === stepName);
-  });
-};
 
 const resetModal = () => {
-  window.clearInterval(scanDelayTimer);
-  showStep("qr");
   messageForm.reset();
-  scanWait.hidden = true;
-  confirmScanButton.hidden = true;
-};
-
-const startScanDelay = () => {
-  let secondsLeft = scanDelaySeconds;
-
-  confirmScanButton.hidden = true;
-  scanWait.hidden = false;
-  scanWait.textContent = `Confirmar em ${secondsLeft} segundos.`;
-
-  scanDelayTimer = window.setInterval(() => {
-    secondsLeft -= 1;
-
-    if (secondsLeft <= 0) {
-      window.clearInterval(scanDelayTimer);
-      scanWait.hidden = true;
-      confirmScanButton.hidden = false;
-      confirmScanButton.focus();
-      return;
-    }
-
-    scanWait.textContent = `Confirmar em ${secondsLeft} segundos.`;
-  }, 1000);
 };
 
 const getRandomWhatsAppNumber = () => {
@@ -83,7 +44,6 @@ document.querySelectorAll(".gift-button").forEach((button) => {
     modalQr.src = button.dataset.qr;
     modalQr.alt = `QR Code para presentear com ${selectedGift.name}`;
     resetModal();
-    startScanDelay();
     modal.showModal();
   });
 });
@@ -104,11 +64,6 @@ giftSearch.addEventListener("input", () => {
   });
 
   emptyState.hidden = visibleCards > 0;
-});
-
-confirmScanButton.addEventListener("click", () => {
-  showStep("message");
-  guestMessage.focus();
 });
 
 messageForm.addEventListener("submit", (event) => {

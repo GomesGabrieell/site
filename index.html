@@ -195,11 +195,7 @@
       <p class="modal-kicker">Checkout do presente</p>
       <h2 id="modal-title">Nome do presente</h2>
       <p class="modal-price" id="modal-price">R$ 0,00</p>
-      <div class="checkout-steps" aria-label="Etapas do presente">
-        <span class="checkout-step is-active" data-step-indicator="qr">1. Pix</span>
-        <span class="checkout-step" data-step-indicator="message">2. Mensagem</span>
-      </div>
-      <div class="gift-step is-active" data-step="qr">
+      <div class="gift-step is-active">
         <div class="order-summary">
           <span>Resumo</span>
           <strong id="summary-item">Presente</strong>
@@ -209,17 +205,12 @@
           <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code do presente" />
         </div>
         <p class="modal-help">
-          Escaneie o QR Code para fazer o Pix. Depois que concluir, confirme
-          para deixar uma mensagem aos noivos.
+          Escaneie o QR Code para fazer o Pix e deixe uma mensagem aos noivos.
         </p>
-        <p class="scan-wait" id="scan-wait" aria-live="polite"></p>
-        <button class="confirm-button" id="confirm-scan" type="button">
-          J&aacute; escaneei o QR Code
-        </button>
       </div>
-      <form class="gift-step message-form" id="message-form" data-step="message">
+      <form class="message-form" id="message-form">
         <div class="success-note">
-          Pix escaneado. Agora envie seu carinho junto com o presente.
+          Depois do Pix, envie seu carinho junto com o presente.
         </div>
         <label for="guest-message">Mensagem para os noivos</label>
         <textarea

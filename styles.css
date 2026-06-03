@@ -330,29 +330,6 @@ body {
   font-weight: 800;
 }
 
-.checkout-steps {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  margin: 0 0 16px;
-}
-
-.checkout-step {
-  padding: 9px 10px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: #fafafa;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.checkout-step.is-active {
-  border-color: rgba(238, 77, 45, 0.35);
-  background: var(--orange-soft);
-  color: var(--orange-dark);
-}
-
 .order-summary {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -408,17 +385,6 @@ body {
   line-height: 1.5;
 }
 
-.scan-wait {
-  margin: 16px 0 0;
-  padding: 10px 12px;
-  border-radius: 4px;
-  background: var(--green-soft);
-  color: var(--green-dark);
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
 .gift-step {
   display: none;
 }
@@ -455,7 +421,7 @@ body {
 }
 
 .message-form {
-  margin-top: 18px;
+  margin-top: 16px;
   text-align: left;
 }
 
