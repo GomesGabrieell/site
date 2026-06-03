@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">QR Code pendente</title>
+  <desc id="desc">Imagem temporária para substituir pelo QR Code do presente.</desc>
+  <rect width="240" height="240" fill="#ffffff"/>
+  <rect x="20" y="20" width="56" height="56" fill="#20232a"/>
+  <rect x="32" y="32" width="32" height="32" fill="#ffffff"/>
+  <rect x="42" y="42" width="12" height="12" fill="#20232a"/>
+  <rect x="164" y="20" width="56" height="56" fill="#20232a"/>
+  <rect x="176" y="32" width="32" height="32" fill="#ffffff"/>
+  <rect x="186" y="42" width="12" height="12" fill="#20232a"/>
+  <rect x="20" y="164" width="56" height="56" fill="#20232a"/>
+  <rect x="32" y="176" width="32" height="32" fill="#ffffff"/>
+  <rect x="42" y="186" width="12" height="12" fill="#20232a"/>
+  <rect x="96" y="24" width="16" height="16" fill="#65775e"/>
+  <rect x="124" y="24" width="16" height="16" fill="#20232a"/>
+  <rect x="96" y="56" width="44" height="16" fill="#20232a"/>
+  <rect x="92" y="96" width="16" height="16" fill="#20232a"/>
+  <rect x="124" y="92" width="16" height="44" fill="#65775e"/>
+  <rect x="156" y="100" width="24" height="16" fill="#20232a"/>
+  <rect x="196" y="96" width="20" height="20" fill="#65775e"/>
+  <rect x="92" y="156" width="40" height="16" fill="#20232a"/>
+  <rect x="148" y="148" width="16" height="48" fill="#20232a"/>
+  <rect x="180" y="156" width="40" height="16" fill="#65775e"/>
+  <rect x="96" y="196" width="16" height="20" fill="#65775e"/>
+  <rect x="124" y="196" width="20" height="20" fill="#20232a"/>
+  <rect x="180" y="196" width="20" height="20" fill="#20232a"/>
+</svg>
