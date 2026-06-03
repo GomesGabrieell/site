@@ -321,6 +321,17 @@ textarea {
   line-height: 1;
 }
 
+.modal-gift-image {
+  display: block;
+  width: min(210px, 66vw);
+  aspect-ratio: 1 / 0.72;
+  margin: 6px auto 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--green-light);
+  object-fit: cover;
+}
+
 .modal-kicker {
   margin: 0 0 8px;
   color: var(--green-dark);

@@ -2,6 +2,7 @@ const modal = document.querySelector("#qr-modal");
 const modalTitle = document.querySelector("#modal-title");
 const modalPrice = document.querySelector("#modal-price");
 const modalQr = document.querySelector("#modal-qr");
+const modalGiftImage = document.querySelector("#modal-gift-image");
 const closeButton = document.querySelector(".modal-close");
 const messageForm = document.querySelector("#message-form");
 const guestMessage = document.querySelector("#guest-message");
@@ -11,6 +12,7 @@ const giftGrid = document.querySelector("#gift-grid");
 const summaryItem = document.querySelector("#summary-item");
 const summaryPrice = document.querySelector("#summary-price");
 const placeholderQr = "assets/qrcodes/placeholder.svg";
+const placeholderGiftImage = "assets/gift-box.png";
 const qrcodeFolder = "assets/qrcodes";
 const whatsappNumbers = ["5531971131979", "553197862970"];
 
@@ -46,6 +48,8 @@ const getQrCodePath = (gift) => {
   return `${qrcodeFolder}/${qrcodeName}`;
 };
 
+const getGiftImagePath = (gift) => gift.imagem || placeholderGiftImage;
+
 const openGiftModal = (gift) => {
   selectedGift = {
     name: gift.nome,
@@ -56,6 +60,8 @@ const openGiftModal = (gift) => {
   modalPrice.textContent = selectedGift.price;
   summaryItem.textContent = selectedGift.name;
   summaryPrice.textContent = selectedGift.price;
+  modalGiftImage.src = getGiftImagePath(gift);
+  modalGiftImage.alt = `Foto do presente ${selectedGift.name}`;
   modalQr.src = getQrCodePath(gift);
   modalQr.alt = `QR Code para presentear com ${selectedGift.name}`;
   resetModal();
@@ -67,8 +73,11 @@ const renderGiftCard = (gift) => {
   card.className = "gift-card";
 
   const image = document.createElement("img");
-  image.src = gift.imagem || "assets/gift-box.png";
+  image.src = getGiftImagePath(gift);
   image.alt = `Presente ${gift.nome}`;
+  image.addEventListener("error", () => {
+    image.src = placeholderGiftImage;
+  }, { once: true });
 
   const info = document.createElement("div");
   info.className = "gift-info";
@@ -129,6 +138,10 @@ const loadGifts = async () => {
 
 modalQr.addEventListener("error", () => {
   modalQr.src = placeholderQr;
+});
+
+modalGiftImage.addEventListener("error", () => {
+  modalGiftImage.src = placeholderGiftImage;
 });
 
 giftSearch.addEventListener("input", updateSearchResults);

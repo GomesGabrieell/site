@@ -2,61 +2,73 @@
   {
     "nome": "Air Fryer",
     "valor": 350,
+    "imagem": "assets/presentes/air-fryer.jpg",
     "qrcode": "350.png"
   },
   {
     "nome": "Liquidificador",
     "valor": 200,
+    "imagem": "assets/presentes/liquidificador.jpg",
     "qrcode": "200.png"
   },
   {
     "nome": "Jogo de Panelas",
     "valor": 300,
+    "imagem": "assets/presentes/jogo-de-panelas.jpg",
     "qrcode": "300.png"
   },
   {
     "nome": "Cafeteira",
     "valor": 180,
+    "imagem": "assets/presentes/cafeteira.jpg",
     "qrcode": "180.png"
   },
   {
     "nome": "Micro-ondas",
     "valor": 450,
+    "imagem": "assets/presentes/micro-ondas.jpg",
     "qrcode": "450.png"
   },
   {
     "nome": "Aspirador",
     "valor": 250,
+    "imagem": "assets/presentes/aspirador.jpg",
     "qrcode": "250.png"
   },
   {
     "nome": "Roupa de Cama",
     "valor": 220,
+    "imagem": "assets/presentes/roupa-de-cama.jpg",
     "qrcode": "220.png"
   },
   {
     "nome": "Jantar Especial",
     "valor": 160,
+    "imagem": "assets/presentes/jantar-especial.jpg",
     "qrcode": "160.png"
   },
   {
     "nome": "Faqueiro",
     "valor": 140,
+    "imagem": "assets/presentes/faqueiro.jpg",
     "qrcode": "140.png"
   },
   {
     "nome": "Toalhas",
     "valor": 120,
+    "imagem": "assets/presentes/toalhas.jpg",
     "qrcode": "120.png"
   },
   {
     "nome": "Ferro de Passar",
     "valor": 150,
+    "imagem": "assets/presentes/ferro-de-passar.jpg",
     "qrcode": "150.png"
   },
   {
     "nome": "Cotas da Lua de Mel",
     "valor": 100,
+    "imagem": "assets/presentes/cotas-lua-de-mel.jpg",
     "qrcode": "100.png"
   }
 ]
