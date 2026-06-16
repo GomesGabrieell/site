@@ -1,74 +1,809 @@
 [
   {
-    "nome": "Air Fryer",
-    "valor": 350,
-    "imagem": "assets/presentes/air-fryer.jpg",
-    "qrcode": "350.png"
+    "nome": "Jogo de cama premium queen",
+    "valor": 699.9,
+    "links": [
+      {
+        "nome": "Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/jogo-de-lencol-300-fios-100-algodao-buddemeyer-new-colors/up/MLBU3820837366#polycard_client=recommendations_pdp-pads-up&wid=MLB6312037378&sid=recos&reco_backend=recomm_platform_base_pads_rfa_MERGE&reco_model=search_recos_backend_merge&reco_client=pdp-pads-up&reco_item_pos=5&reco_backend_type=low_level&reco_id=777d5a56-4704-4606-a4a1-ab91c989f80b&is_advertising=true&ad_domain=PDPDESKTOP_UP&ad_position=6&ad_click_id=YmZlYjdlMjQtMjk5ZC00ODlkLTljNjQtYzVmOWE3NTNiNzYy"
+      }
+    ],
+    "imagem": "assets/presentes/jogo-de-cama-premium-queen.webp",
+    "qrcode": "700.png"
   },
   {
-    "nome": "Liquidificador",
-    "valor": 200,
-    "imagem": "assets/presentes/liquidificador.jpg",
-    "qrcode": "200.png"
+    "nome": "Tapete de sala 2m x 3m",
+    "valor": 84.07,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/4XRuCHS9"
+      }
+    ],
+    "imagem": "assets/presentes/tapete-de-sala-2m-x-3m.jpg",
+    "qrcode": "84.png"
   },
   {
-    "nome": "Jogo de Panelas",
-    "valor": 300,
-    "imagem": "assets/presentes/jogo-de-panelas.jpg",
-    "qrcode": "300.png"
+    "nome": "Smart TV LG 65 polegadas",
+    "valor": 3419,
+    "links": [
+      {
+        "nome": "Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/smart-tv-lg-uhd-ai-ua75-65-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25/p/MLB53610161?pdp_filters=item_id%3AMLB4179239349&matt_tool=38524122#origin=share&sid=share&wid=MLB4179239349&action=copy"
+      }
+    ],
+    "imagem": "assets/presentes/smart-tv-lg-65-polegadas.jpg",
+    "qrcode": "3419.png"
   },
   {
-    "nome": "Cafeteira",
-    "valor": 180,
-    "imagem": "assets/presentes/cafeteira.jpg",
-    "qrcode": "180.png"
+    "nome": "Aparelho de jantar",
+    "valor": 288.92,
+    "links": [
+      {
+        "nome": "Shopee 1",
+        "url": "https://br.shp.ee/tp7q3vCu"
+      },
+      {
+        "nome": "Shopee 2",
+        "url": "https://br.shp.ee/1KaazuDL"
+      }
+    ],
+    "imagem": "assets/presentes/aparelho-de-jantar.jpg",
+    "qrcode": "289.png"
   },
   {
-    "nome": "Micro-ondas",
-    "valor": 450,
-    "imagem": "assets/presentes/micro-ondas.jpg",
-    "qrcode": "450.png"
+    "nome": "Jogo de tacas boemia",
+    "valor": 145.35,
+    "links": [
+      {
+        "nome": "Shopee 1",
+        "url": "https://br.shp.ee/aAadNbPF"
+      },
+      {
+        "nome": "Shopee 2",
+        "url": "https://br.shp.ee/jaFVgJS2"
+      }
+    ],
+    "imagem": "assets/presentes/jogo-de-tacas-boemia.webp",
+    "qrcode": "145.png"
   },
   {
-    "nome": "Aspirador",
-    "valor": 250,
-    "imagem": "assets/presentes/aspirador.jpg",
-    "qrcode": "250.png"
+    "nome": "Protetor de colchao queen",
+    "valor": 47.97,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/gR3z42h3"
+      }
+    ],
+    "imagem": "assets/presentes/protetor-de-colchao-queen.jpg",
+    "qrcode": "48.png"
   },
   {
-    "nome": "Roupa de Cama",
-    "valor": 220,
-    "imagem": "assets/presentes/roupa-de-cama.jpg",
-    "qrcode": "220.png"
+    "nome": "Organizador de lavanderia",
+    "valor": 110.25,
+    "links": [
+      {
+        "nome": "Shopee 1",
+        "url": "https://br.shp.ee/VaR8um3u"
+      },
+      {
+        "nome": "Shopee 2",
+        "url": "https://br.shp.ee/6fMsPPWS"
+      }
+    ],
+    "imagem": "assets/presentes/organizador-de-lavanderia.jpg",
+    "qrcode": "110.png"
   },
   {
-    "nome": "Jantar Especial",
-    "valor": 160,
-    "imagem": "assets/presentes/jantar-especial.jpg",
-    "qrcode": "160.png"
+    "nome": "Jogos de potes hermeticos",
+    "valor": 106.25,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/6VnKJwJy"
+      }
+    ],
+    "imagem": "assets/presentes/jogos-de-potes-hermeticos.jpg",
+    "qrcode": "106.png"
   },
   {
-    "nome": "Faqueiro",
-    "valor": 140,
-    "imagem": "assets/presentes/teste123.png",
+    "nome": "Micro-ondas Philco 20L",
+    "valor": 529,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/ofNvQVjf"
+      },
+      {
+        "nome": "Amazon",
+        "url": "https://www.amazon.com.br/Micro-ondas-Philco-Espelhado-Limpa-PMO23E/dp/B08JD66K5C/ref=asc_df_B08JD66K5C?mcid=445464f29d9c355896a09caf3cc5a2e9&tag=googleshopp00-20&linkCode=df0&hvadid=709870389015&hvpos=&hvnetw=g&hvrand=6980276758422941896&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9101150&hvtargid=pla-1395173214451&hvocijid=6980276758422941896-B08JD66K5C-&hvexpln=0&language=pt_BR&th=1"
+      },
+      {
+        "nome": "Magazine Luiza",
+        "url": "https://www.magazineluiza.com.br/micro-ondas-pmo23eb-20l-com-funcao-tira-odor-philco/p/hb8ef33f07/ed/mond/?&seller_id=carrefouroficial&utm_source=google&utm_medium=cpc&utm_term=84408&utm_campaign=google_eco_per_ven_pla_ele_sor_3p_ed1-ed2-a-0326&utm_content=&partner_id=84408&gclsrc=aw.ds&gad_source=1&gad_campaignid=23595290313&gbraid=0AAAAAD4zZmT0Tj6xhVXE7lRvznUi0YbaC&gclid=CjwKCAjwxb7RBhA5EiwAQ-AAdKlPBztFxFF_HFLFUbw3xaUuaJY-BKkAJBK5s5uvCGZYHmly5FtqbhoC3K4QAvD_BwE"
+      }
+    ],
+    "imagem": "assets/presentes/micro-ondas-philco-20l.jpg",
+    "qrcode": "529.png"
+  },
+  {
+    "nome": "Batedeira",
+    "valor": 289.9,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/GeJu2ee4"
+      }
+    ],
+    "imagem": "assets/presentes/batedeira.jpg",
+    "qrcode": "290.png"
+  },
+  {
+    "nome": "Jogo americano de mesa",
+    "valor": 84.83,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/aUBeqJJb"
+      }
+    ],
+    "imagem": "assets/presentes/jogo-americano-de-mesa.jpg",
+    "qrcode": "85.png"
+  },
+  {
+    "nome": "Mixer",
+    "valor": 139.9,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/eKgTxxyB"
+      }
+    ],
+    "imagem": "assets/presentes/mixer.jpg",
     "qrcode": "140.png"
   },
   {
-    "nome": "Toalhas",
-    "valor": 120,
-    "imagem": "assets/presentes/toalhas.jpg",
-    "qrcode": "120.png"
+    "nome": "Jarra de vidro",
+    "valor": 36.5,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/VrFF4jQ7"
+      }
+    ],
+    "imagem": "assets/presentes/jarra-de-vidro.jpg",
+    "qrcode": "37.png"
   },
   {
-    "nome": "Ferro de Passar",
-    "valor": 150,
-    "imagem": "assets/presentes/ferro-de-passar.jpg",
-    "qrcode": "150.png"
+    "nome": "Kit utensilios de cozinha",
+    "valor": 42.99,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/LjibvdZh"
+      }
+    ],
+    "imagem": "assets/presentes/kit-utensilios-de-cozinha.jpg",
+    "qrcode": "43.png"
   },
   {
-    "nome": "Cotas da Lua de Mel",
-    "valor": 100,
-    "imagem": "assets/presentes/cotas-lua-de-mel.jpg",
-    "qrcode": "100.png"
+    "nome": "Kit limpeza",
+    "valor": 136,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/4RX7B1s9"
+      }
+    ],
+    "imagem": "assets/presentes/kit-limpeza.jpg",
+    "qrcode": "136.png"
+  },
+  {
+    "nome": "Jogo de tacas e jarra lavanda",
+    "valor": 152.92,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/ncSqdKwB"
+      }
+    ],
+    "imagem": "assets/presentes/jogo-de-tacas-e-jarra-lavanda.jpg",
+    "qrcode": "153.png"
+  },
+  {
+    "nome": "Cobertor",
+    "valor": 127.42,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/AWUdNsF5"
+      }
+    ],
+    "imagem": "assets/presentes/cobertor.jpg",
+    "qrcode": "127.png"
+  },
+  {
+    "nome": "Sanduicheira",
+    "valor": 125.16,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/EAbEAq5K"
+      }
+    ],
+    "imagem": "assets/presentes/sanduicheira.jpg",
+    "qrcode": "125.png"
+  },
+  {
+    "nome": "Lixeira grande",
+    "valor": 151.9,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/QWsYSf3Q"
+      }
+    ],
+    "imagem": "assets/presentes/lixeira-grande.jpg",
+    "qrcode": "152.png"
+  },
+  {
+    "nome": "Lixeira para banheiro",
+    "valor": 71.99,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/xEriTR4g"
+      }
+    ],
+    "imagem": "assets/presentes/lixeira-para-banheiro.jpg",
+    "qrcode": "72.png"
+  },
+  {
+    "nome": "Tabua de frios",
+    "valor": 54.67,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/XiS2Ggga"
+      }
+    ],
+    "imagem": "assets/presentes/tabua-de-frios.jpg",
+    "qrcode": "55.png"
+  },
+  {
+    "nome": "Mesa de cabeceira",
+    "valor": 559.9,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/LqgMTsjE"
+      }
+    ],
+    "imagem": "assets/presentes/mesa-de-cabeceira.jpg",
+    "qrcode": "560.png"
+  },
+  {
+    "nome": "Cumbucas",
+    "valor": 56.9,
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/BFAM4RhP"
+      }
+    ],
+    "imagem": "assets/presentes/cumbucas.jpg",
+    "qrcode": "57.png"
+  },
+  {
+    "nome": "Cafeteira",
+    "valor": 234.16,
+    "links": [
+      {
+        "nome": "Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/cafeteira-arno-linha-soleil-com-jarra-de-125l-e-sistema-corta-gotas-marfim-sfcm/p/MLB20965080?matt_event_ts=1781613217723&matt_d2id=fb565470-2466-4264-9e00-4af4a8719761&matt_tracing_id=f197fddc-cca3-4f48-a429-b6db80ebe03d#polycard_client=recommendations_home_affiliate-profile&reco_backend=item_decorator&reco_client=home_affiliate-profile&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=01ea35d3-bd92-403f-828e-9a47771f81ec&tracking_id=90dc49a9-5930-4035-b87d-056c34b9aa18&wid=MLB4342956077&sid=recos&c_id=/home/card-featured/element&c_uid=e10da4db-d6b8-4cad-bb69-7e1f79b54021"
+      }
+    ],
+    "imagem": "assets/presentes/cafeteira.webp",
+    "qrcode": "234.png"
+  },
+  {
+    "nome": "Faqueiro",
+    "valor": 499.99,
+    "links": [
+      {
+        "nome": "Camicado",
+        "url": "https://www.camicado.com.br/p/jogo-de-facas-com-cepo-home-style-jersey/-/A-300041193-br.lc?sku=000000000000041193"
+      }
+    ],
+    "imagem": "assets/presentes/faqueiro.jpg",
+    "qrcode": "500.png"
+  },
+  {
+    "nome": "Aspirador",
+    "valor": 1070.9,
+    "links": [
+      {
+        "nome": "Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/aspirador-de-po-vertical-electrolux-144v-ergorapido-sem-fio-2-em-1-luz-led-erg24n-bivolt/p/MLB18908909?matt_event_ts=1781613218735&matt_d2id=9486c9a6-a30b-4059-818c-a670ab1a9cbc&matt_tracing_id=57b7ff53-e99b-44a7-99f0-9441d00cb316#polycard_client=recommendations_home_affiliate-profile&reco_backend=item_decorator&reco_client=home_affiliate-profile&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=b91dcc18-a52c-48d0-a227-d184aa6fa535&tracking_id=781a441e-aec4-4536-a1e8-17b0481d9299&wid=MLB2766974628&sid=recos&c_id=/home/card-featured/element&c_uid=51f6f1f5-97f5-4076-87e2-98c7b1a9db27"
+      }
+    ],
+    "imagem": "assets/presentes/aspirador.webp",
+    "qrcode": "1071.png"
+  },
+  {
+    "nome": "Lava-Loucas Midea 14 servicos",
+    "valor": 3099,
+    "links": [
+      {
+        "nome": "Midea",
+        "url": "https://www.midea.com.br/lava-loucas-14-servicos-midea-cor-branca/p?srsltid=AfmBOopibASXDIPhNaJ0F4OhyK-zq8vNyue6izKWkFW9hBKe6Sb8FYBT"
+      }
+    ],
+    "imagem": "assets/presentes/lava-loucas-midea.png",
+    "qrcode": "3099.png"
+  },
+  {
+    "nome": "Mala de viagem",
+    "valor": 159.99,
+    "imagem": "assets/presentes/mala-de-viagem.jpg",
+    "qrcode": "160.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/stVjdAjv"
+      }
+    ]
+  },
+  {
+    "nome": "Cuscuzeira inducao",
+    "valor": 104.99,
+    "imagem": "assets/presentes/cuscuzeira-inducao.jpg",
+    "qrcode": "105.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/TphTT9iH"
+      }
+    ]
+  },
+  {
+    "nome": "Pipoqueira inducao",
+    "valor": 263.89,
+    "imagem": "assets/presentes/pipoqueira-inducao.jpg",
+    "qrcode": "264.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/mUpiZzCF"
+      }
+    ]
+  },
+  {
+    "nome": "Panela eletrica",
+    "valor": 499.9,
+    "imagem": "assets/presentes/panela-eletrica.jpg",
+    "qrcode": "500.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/AoL4VK9k"
+      }
+    ]
+  },
+  {
+    "nome": "Ferro",
+    "valor": 194.9,
+    "imagem": "assets/presentes/ferro.jpg",
+    "qrcode": "195.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/ZdZHgB3Z"
+      }
+    ]
+  },
+  {
+    "nome": "Jogo de panela inducao brinox",
+    "valor": 249.99,
+    "imagem": "assets/presentes/jogo-de-panela-inducao-brinox.jpg",
+    "qrcode": "250.png",
+    "links": [
+      {
+        "nome": "Brinox",
+        "url": "https://www.brinox.com.br/jogo-de-panelas-com-inducao-brinox-antiaderente-ceramic-life-smart-plus-7-pecas-areia/p"
+      }
+    ]
+  },
+  {
+    "nome": "Jogo de toalhas premium",
+    "valor": 120.95,
+    "imagem": "assets/presentes/jogo-de-toalhas-premium.jpg",
+    "qrcode": "121.png",
+    "links": [
+      {
+        "nome": "Link",
+        "url": "https://br.shp.ee/sdG1gyPr"
+      },
+      {
+        "nome": "Link 2",
+        "url": "https://br.shp.ee/epP4ACuv"
+      }
+    ]
+  },
+  {
+    "nome": "Jogo de facas",
+    "valor": 147.99,
+    "imagem": "assets/presentes/jogo-de-facas.jpg",
+    "qrcode": "148.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/aSdVoTSw"
+      }
+    ]
+  },
+  {
+    "nome": "Kit ferramentas",
+    "valor": 125.9,
+    "imagem": "assets/presentes/kit-ferramentas.jpg",
+    "qrcode": "126.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/sLSeaecY"
+      }
+    ]
+  },
+  {
+    "nome": "Chaleira eletrica",
+    "valor": 55,
+    "imagem": "assets/presentes/chaleira-eletrica.jpg",
+    "qrcode": "55.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/zK9nRxid"
+      }
+    ]
+  },
+  {
+    "nome": "Cafeteira eletrica",
+    "valor": 339.9,
+    "imagem": "assets/presentes/cafeteira-eletrica.jpg",
+    "qrcode": "340.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/xZCYUKEV"
+      }
+    ]
+  },
+  {
+    "nome": "Airfryer",
+    "valor": 573.71,
+    "imagem": "assets/presentes/airfryer.jpg",
+    "qrcode": "574.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/pu28ZJbC"
+      }
+    ]
+  },
+  {
+    "nome": "Liquidificador",
+    "valor": 309.9,
+    "imagem": "assets/presentes/liquidificador.jpg",
+    "qrcode": "310.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/iMEPpXxJ"
+      }
+    ]
+  },
+  {
+    "nome": "Varal de chao",
+    "valor": 99.9,
+    "imagem": "assets/presentes/varal-de-chao.jpg",
+    "qrcode": "100.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/vzmBcRKx"
+      }
+    ]
+  },
+  {
+    "nome": "Edredom premium",
+    "valor": 209.9,
+    "imagem": "assets/presentes/edredom-premium.jpg",
+    "qrcode": "210.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/TGWv2naV"
+      }
+    ]
+  },
+  {
+    "nome": "Kit churrasco com tabua",
+    "valor": 318.25,
+    "imagem": "assets/presentes/kit-churrasco-com-tabua.jpg",
+    "qrcode": "318.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/e91eHQWy"
+      }
+    ]
+  },
+  {
+    "nome": "Processador de alimentos",
+    "valor": 71.98,
+    "imagem": "assets/presentes/processador-de-alimentos.jpg",
+    "qrcode": "72.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/D3BVQM6F"
+      }
+    ]
+  },
+  {
+    "nome": "Travessas de vidro",
+    "valor": 327.16,
+    "imagem": "assets/presentes/travessas-de-vidro.jpg",
+    "qrcode": "327.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/1eXyq8jN"
+      }
+    ]
+  },
+  {
+    "nome": "Assadeiras",
+    "valor": 59.9,
+    "imagem": "assets/presentes/assadeiras.jpg",
+    "qrcode": "60.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/VLvoErCN"
+      }
+    ]
+  },
+  {
+    "nome": "Forma de bolo",
+    "valor": 112.9,
+    "imagem": "assets/presentes/forma-de-bolo.jpg",
+    "qrcode": "113.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/Gagh1mMq"
+      }
+    ]
+  },
+  {
+    "nome": "Cabides",
+    "valor": 69.9,
+    "imagem": "assets/presentes/cabides.jpg",
+    "qrcode": "70.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/SYk3rNab"
+      }
+    ]
+  },
+  {
+    "nome": "Saladeira",
+    "valor": 327.16,
+    "imagem": "assets/presentes/saladeira.jpg",
+    "qrcode": "327.png",
+    "links": [
+      {
+        "nome": "Link",
+        "url": "https://br.shp.ee/TY1tvXs3"
+      },
+      {
+        "nome": "Link 2",
+        "url": "https://br.shp.ee/VKbiA53o"
+      }
+    ]
+  },
+  {
+    "nome": "Garrafa de vidro",
+    "valor": 79.9,
+    "imagem": "assets/presentes/garrafa-de-vidro.jpg",
+    "qrcode": "80.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/vjrdPRYU"
+      }
+    ]
+  },
+  {
+    "nome": "Pano de prato",
+    "valor": 39.99,
+    "imagem": "assets/presentes/pano-de-prato.jpg",
+    "qrcode": "40.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/NjfR5iu4"
+      }
+    ]
+  },
+  {
+    "nome": "Conjunto de bowls",
+    "valor": 113.9,
+    "imagem": "assets/presentes/conjunto-de-bowls.jpg",
+    "qrcode": "114.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/iUvyFwpF"
+      }
+    ]
+  },
+  {
+    "nome": "Jogo de taca",
+    "valor": 89.9,
+    "imagem": "assets/presentes/jogo-de-taca.jpg",
+    "qrcode": "90.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/ERNYQh7N"
+      }
+    ]
+  },
+  {
+    "nome": "Cota primeira compra",
+    "valor": 1000,
+    "imagem": "assets/presentes/cota-primeira-compra.jpg",
+    "qrcode": "1000.png",
+    "links": []
+  },
+  {
+    "nome": "Cota para lua de mel",
+    "valor": 1000,
+    "imagem": "assets/gift-box.png",
+    "qrcode": "1000.png",
+    "links": []
+  },
+  {
+    "nome": "Cota para guarda roupa",
+    "valor": 1000,
+    "imagem": "assets/presentes/cota-guarda-roupa.jpg",
+    "qrcode": "1000.png",
+    "links": []
+  },
+  {
+    "nome": "Cota Maquina de lavar louca",
+    "valor": 1000,
+    "imagem": "assets/presentes/cota-maquina-lavar-louca.jpg",
+    "qrcode": "1000.png",
+    "links": []
+  },
+  {
+    "nome": "Cota Robo aspirador",
+    "valor": 1000,
+    "imagem": "assets/presentes/cota-robo-aspirador.jpg",
+    "qrcode": "1000.png",
+    "links": []
+  },
+  {
+    "nome": "Cafeteira EOS Latte italiana",
+    "valor": 499.91,
+    "imagem": "assets/presentes/cafeteira-eos-latte-italiana.jpg",
+    "qrcode": "500.png",
+    "links": [
+      {
+        "nome": "Amazon",
+        "url": "https://www.amazon.com.br/Cafeteira-Espresso-Latte-Italiana-Ecf05ecl/dp/B0CG2HZS5J/ref=asc_df_B0CG2JSZBD?mcid=fe2bc6a7827d324e8535d2762724e469&tag=googleshopp00-20&linkCode=df0&hvadid=709886750320&hvpos=&hvnetw=g&hvrand=4713133636865857029&hvpone=&hvptwo=&hvqmt=&hvdev=t&hvdvcmdl=&hvlocint=&hvlocphy=1001572&hvtargid=pla-2204522749413&hvocijid=4713133636865857029-B0CG2JSZBD-&hvexpln=0&language=pt_BR&th=1"
+      }
+    ]
+  },
+  {
+    "nome": "Robo aspirador",
+    "valor": 2350,
+    "imagem": "assets/presentes/robo-aspirador.png",
+    "qrcode": "2350.png",
+    "links": [
+      {
+        "nome": "Mercado Livre",
+        "url": "https://www.mercadolivre.com.br/p/MLB64251864?matt_tool=38524122&pdp_filters=item_id:MLB6816818614&ua=9p-UJaO-x30TX_bqVGB2DurSgfdDMQ#origin=share&sid=share&wid=MLB6816818614&action=copy"
+      }
+    ]
+  },
+  {
+    "nome": "Caixa termica para viagens",
+    "valor": 56.04,
+    "imagem": "assets/presentes/caixa-termica-para-viagens.png",
+    "qrcode": "56.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/hig45sye"
+      }
+    ]
+  },
+  {
+    "nome": "Kit copo",
+    "valor": 75.9,
+    "imagem": "assets/presentes/kit-copo.png",
+    "qrcode": "76.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/vRkY87uK"
+      }
+    ]
+  },
+  {
+    "nome": "Kit sobremesa",
+    "valor": 75.9,
+    "imagem": "assets/presentes/kit-sobremesa.png",
+    "qrcode": "76.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/ieg7t6Lu"
+      }
+    ]
+  },
+  {
+    "nome": "Organizador de geladeira",
+    "valor": 118.92,
+    "imagem": "assets/presentes/organizador-de-geladeira.png",
+    "qrcode": "119.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/To54tMLf"
+      }
+    ]
+  },
+  {
+    "nome": "Kit colcha cama queen Melody",
+    "valor": 243.87,
+    "imagem": "assets/presentes/kit-colcha-cama-queen-melody-bonita.jpg",
+    "qrcode": "244.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/qiw6yDLt"
+      }
+    ]
+  },
+  {
+    "nome": "Kit colcha cama queen Percal",
+    "valor": 152.92,
+    "imagem": "assets/presentes/kit-colcha-cama-queen-percal.png",
+    "qrcode": "153.png",
+    "links": [
+      {
+        "nome": "Shopee",
+        "url": "https://br.shp.ee/YosjrsMY"
+      }
+    ]
+  },
+  {
+    "nome": "Panela de Pressao Inducao Brinox",
+    "valor": 339.99,
+    "imagem": "assets/presentes/panela-de-pressao-inducao-brinox.png",
+    "qrcode": "340.png",
+    "links": [
+      {
+        "nome": "Brinox",
+        "url": "https://share.google/5Cl2hRInjz47Z9bMK"
+      }
+    ]
   }
 ]

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#65775e" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Lista de Presentes | Sarah & Gabriel</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260616-quotas" />
   </head>
   <body>
     <header class="topbar">
@@ -23,13 +26,14 @@
       </label>
       <div class="cart-pill" aria-label="Lista de presentes">
         <span aria-hidden="true">&#9825;</span>
-        <span>Lista dos noivos</span>
+        <span id="gift-count">Lista dos noivos</span>
       </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-inner">
+          <p class="hero-kicker">Sarah &amp; Gabriel</p>
           <h1 id="page-title">Lista de Presentes</h1>
           <p>
             Vamos come&ccedil;ar uma nova vida juntos, e cada gesto de carinho torna
@@ -37,17 +41,45 @@
             presente, mas se desejar nos aben&ccedil;oar, escolha um item e escaneie o
             QR Code.
           </p>
+          <div class="hero-actions" aria-label="Atalhos da lista">
+            <a href="#gift-list">Ver presentes</a>
+            <span>Pix, parcelas ou link de compra</span>
+          </div>
         </div>
       </section>
 
-      <section class="gift-section" aria-label="Presentes dispon&iacute;veis">
+      <section class="gift-section" id="gift-list" aria-label="Presentes dispon&iacute;veis">
         <div class="section-heading">
-          <p class="section-tag">Presentes mais escolhidos</p>
-          <h2>Com carinho, escolha o seu presente</h2>
-          <p>
+          <div>
+            <p class="section-tag">Presentes mais escolhidos</p>
+            <h2>Escolha com carinho</h2>
+            <p>
             Cada contribui&ccedil;&atilde;o ajuda a construir nosso lar com amor, cuidado e
             boas mem&oacute;rias.
-          </p>
+            </p>
+          </div>
+          <p class="result-count" id="result-count">Carregando presentes...</p>
+        </div>
+
+        <div class="gift-toolbar" aria-label="Filtros da lista">
+          <div class="filter-group" id="category-filters" aria-label="Filtrar por categoria">
+            <button class="filter-button is-active" type="button" data-category="all">Todos</button>
+            <button class="filter-button" type="button" data-category="casa">Casa</button>
+            <button class="filter-button" type="button" data-category="cama-mesa-banho">Cama, mesa e banho</button>
+            <button class="filter-button" type="button" data-category="cozinha">Cozinha</button>
+            <button class="filter-button" type="button" data-category="lavanderia">Lavanderia</button>
+            <button class="filter-button" type="button" data-category="noivos">Noivos</button>
+            <button class="filter-button" type="button" data-category="geral">Geral</button>
+          </div>
+          <label class="sort-control" for="gift-sort">
+            <span>Ordenar</span>
+            <select id="gift-sort">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor valor</option>
+              <option value="price-desc">Maior valor</option>
+              <option value="name-asc">Nome A-Z</option>
+            </select>
+          </label>
         </div>
 
         <p class="empty-state" id="empty-state" hidden>
@@ -65,32 +97,48 @@
       <h2 id="modal-title">Nome do presente</h2>
       <p class="modal-price" id="modal-price">R$ 0,00</p>
       <div class="gift-step is-active">
+        <div class="payment-panel" aria-label="Escolha de pagamento">
+          <p class="payment-label">Como deseja presentear?</p>
+          <div class="payment-toggle" id="payment-toggle">
+            <button class="payment-option is-selected" type="button" data-payment-mode="full">
+              Valor cheio
+            </button>
+            <button class="payment-option" type="button" data-payment-mode="quota">
+              Comprar parcelas
+            </button>
+            <button class="payment-option" id="link-payment-option" type="button" data-payment-mode="links">
+              Comprar por link
+            </button>
+          </div>
+          <div class="quota-picker" id="quota-picker" hidden>
+            <label for="quota-count">Quantidade de parcelas</label>
+            <div class="quota-dropdown" id="quota-count" data-value="1">
+              <button class="quota-dropdown-button" id="quota-count-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span>1 parcela</span>
+              </button>
+              <div class="quota-dropdown-menu" id="quota-count-menu" role="listbox" aria-labelledby="quota-count-button"></div>
+            </div>
+          </div>
+        </div>
         <div class="order-summary">
           <span>Resumo</span>
           <strong id="summary-item">Presente</strong>
           <small id="summary-price">R$ 0,00</small>
         </div>
-        <div class="qr-frame">
-          <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code do presente" />
+        <div class="store-links" id="store-links" hidden></div>
+        <div class="qr-gallery" id="qr-gallery">
+          <div class="qr-card">
+            <span>Pagamento unico</span>
+            <div class="qr-frame">
+              <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code do presente" />
+            </div>
+            <strong>R$ 0,00</strong>
+          </div>
         </div>
-        <p class="modal-help">
-          Escaneie o QR Code para fazer o Pix e deixe uma mensagem aos noivos.
+        <p class="modal-help" id="modal-help">
+          Escaneie o QR Code para fazer o Pix.
         </p>
       </div>
-      <form class="message-form" id="message-form">
-        <div class="success-note">
-          Depois do Pix, envie seu carinho junto com o presente.
-        </div>
-        <label for="guest-message">Mensagem para os noivos</label>
-        <textarea
-          id="guest-message"
-          name="message"
-          rows="5"
-          placeholder="Escreva sua mensagem com carinho..."
-          required
-        ></textarea>
-        <button class="confirm-button" type="submit">Enviar mensagem no WhatsApp</button>
-      </form>
     </dialog>
 
     <script src="script.js"></script>
