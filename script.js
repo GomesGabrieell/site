@@ -26,6 +26,7 @@ const placeholderQr = "assets/qrcodes/placeholder.svg";
 const placeholderGiftImage = "assets/gift-box.png";
 const qrcodeFolder = "assets/qrcodes";
 const quotaMinimumValue = 600;
+const pixStepValue = 50;
 const exampleStores = [
   { nome: "Amazon", baseUrl: "https://example.com/amazon" },
   { nome: "Mercado Livre", baseUrl: "https://example.com/mercado-livre" },
@@ -41,7 +42,7 @@ const slugify = (text) => text
 
 const categoryLabels = {
   casa: "Casa",
-  "cama-mesa-banho": "Cama, mesa e banho",
+  "cama-mesa-banho": "Cama, Mesa E Banho",
   cozinha: "Cozinha",
   lavanderia: "Lavanderia",
   noivos: "Noivos",
@@ -78,6 +79,7 @@ const categoryKeywords = {
     "mixer",
     "cooktop",
     "geladeira",
+    "queijeira",
   ],
   lavanderia: [
     "lavanderia",
@@ -258,9 +260,26 @@ const formatQrAmount = (value) => {
   return String(cents).padStart(3, "0");
 };
 
+const getPixAmount = (value) => {
+  const amount = Number(value);
+
+  if (!Number.isFinite(amount)) {
+    return amount;
+  }
+
+  if (amount < 1000) {
+    return Math.ceil(amount / pixStepValue) * pixStepValue;
+  }
+
+  return Math.round(amount);
+};
+
+const getGiftPrice = (gift) => formatPrice(gift.valor);
+
+const getPixQrCodeName = (value) => `${getPixAmount(value)}.png`;
+
 const getQrCodePath = (gift) => {
-  const qrcodeName = gift.qrcode || gift.qrcodes?.avista || gift.qrcodes?.full || `${gift.valor}.png`;
-  return `${qrcodeFolder}/${qrcodeName}`;
+  return `${qrcodeFolder}/${getPixQrCodeName(gift.valor)}`;
 };
 
 const getQuotaTotal = (gift) => {
@@ -317,11 +336,11 @@ const getQuotaQrCodePath = (gift, quotas, amount) => {
     || gift.qrcodes?.valores?.[amountKey]
     || gift.qrcodes?.amounts?.[amountKey];
 
-  if (explicitQrCode) {
+  if (explicitQrCode && explicitQrCode === getPixQrCodeName(amount)) {
     return `${qrcodeFolder}/${explicitQrCode}`;
   }
 
-  return `${qrcodeFolder}/${formatQrAmount(amount)}.png`;
+  return `${qrcodeFolder}/${getPixQrCodeName(amount)}`;
 };
 
 const getGiftImagePath = (gift) => gift.imagem || placeholderGiftImage;
@@ -344,7 +363,7 @@ const normalizeGiftLink = (link, index) => {
   }
 
   return {
-    label: typeof link === "string" ? `Opcao ${index + 1}` : link.nome || link.label || link.loja || `Opcao ${index + 1}`,
+    label: typeof link === "string" ? `Opção ${index + 1}` : link.nome || link.label || link.loja || `Opção ${index + 1}`,
     url: normalizeStoreLink(rawUrl),
   };
 };
@@ -364,7 +383,7 @@ const updateStoreLink = (gift) => {
   if (links.length === 0) {
     const emptyNote = document.createElement("p");
     emptyNote.className = "store-empty";
-    emptyNote.textContent = "Cadastre um link em presentes.json para liberar essa opção.";
+    emptyNote.textContent = "Cadastre Um Link Em presentes.json Para Liberar Essa Opção.";
     storeLinks.replaceChildren(emptyNote);
     return;
   }
@@ -429,38 +448,38 @@ const updatePaymentView = () => {
   });
 
   if (isLinksMode) {
-    selectedPayment.description = "compra por link";
-    summaryPrice.textContent = "Link da loja";
-    modalHelp.textContent = "Abra uma das opcoes de loja para comprar e presentear os noivos.";
+    selectedPayment.description = "Compra Por Link";
+    summaryPrice.textContent = "Link Da Loja";
+    modalHelp.textContent = "Abra Uma Das Opções De Loja Para Comprar E Presentear Os Noivos.";
     qrGallery.replaceChildren();
     return;
   }
 
   if (!isQuotaMode) {
-    selectedPayment.description = `valor integral de ${selectedGift.price}`;
+    selectedPayment.description = `Valor Integral De ${selectedGift.price}`;
     summaryPrice.textContent = selectedGift.price;
-    modalHelp.textContent = "Escaneie o QR Code para fazer o Pix integral.";
+    modalHelp.textContent = "Escaneie O QR Code Para Fazer O Pix Integral.";
     qrGallery.replaceChildren(createQrCard({
-      label: "Pagamento unico",
+      label: "Pagamento Único",
       price: selectedGift.price,
       src: getQrCodePath(gift),
-      alt: `QR Code integral para presentear com ${selectedGift.name}`,
+      alt: `QR Code Integral Para Presentear Com ${selectedGift.name}`,
     }));
     return;
   }
 
   const quotaAmount = getQuotaAmount(gift, quotas);
   const quotaPrice = formatPrice(quotaAmount);
-  const quotaLabel = quotas === 1 ? "1 parcela" : `${quotas} parcelas`;
+  const quotaLabel = quotas === 1 ? "1 Parcela" : `${quotas} Parcelas`;
 
-  selectedPayment.description = `${quotaLabel} no valor de ${quotaPrice}`;
+  selectedPayment.description = `${quotaLabel} No Valor De ${quotaPrice}`;
   summaryPrice.textContent = quotaPrice;
-  modalHelp.textContent = "Escaneie o QR Code correspondente ao valor escolhido.";
+  modalHelp.textContent = "Escaneie O QR Code Correspondente Ao Valor Escolhido.";
   qrGallery.replaceChildren(createQrCard({
     label: quotaLabel,
     price: quotaPrice,
     src: getQuotaQrCodePath(gift, quotas, quotaAmount),
-    alt: `QR Code de ${quotaPrice} para ${selectedGift.name}`,
+    alt: `QR Code De ${quotaPrice} Para ${selectedGift.name}`,
   }));
 };
 
@@ -474,7 +493,7 @@ const updateQuotaOptions = (gift) => {
   if (!quotasEnabled) {
     quotaCountMenu.replaceChildren();
     quotaCount.dataset.value = "1";
-    quotaCountButtonLabel.textContent = "1 parcela";
+    quotaCountButtonLabel.textContent = "1 Parcela";
     return;
   }
 
@@ -482,7 +501,7 @@ const updateQuotaOptions = (gift) => {
   const options = Array.from({ length: quotaTotal }, (_, index) => {
     const quotas = index + 1;
     const option = document.createElement("button");
-    const quotaLabel = quotas === 1 ? "1 parcela" : `${quotas} parcelas`;
+    const quotaLabel = quotas === 1 ? "1 Parcela" : `${quotas} Parcelas`;
 
     option.type = "button";
     option.className = "quota-dropdown-option";
@@ -503,7 +522,7 @@ const updateQuotaOptions = (gift) => {
 const openGiftModal = (gift) => {
   selectedGift = {
     name: gift.nome,
-    price: formatPrice(gift.valor),
+    price: getGiftPrice(gift),
     raw: gift,
   };
 
@@ -512,7 +531,7 @@ const openGiftModal = (gift) => {
   summaryItem.textContent = selectedGift.name;
   summaryPrice.textContent = selectedGift.price;
   modalGiftImage.src = getGiftImagePath(gift);
-  modalGiftImage.alt = `Foto do presente ${selectedGift.name}`;
+  modalGiftImage.alt = `Foto Do Presente ${selectedGift.name}`;
   updateStoreLink(gift);
   updateQuotaOptions(gift);
   resetModal();
@@ -523,7 +542,6 @@ const openGiftModal = (gift) => {
 const renderGiftCard = (gift) => {
   const card = document.createElement("article");
   card.className = "gift-card";
-  card.dataset.badge = canUseQuotas(gift) ? "Pix/Parcelas" : "Pix/Link";
 
   const image = document.createElement("img");
   image.src = getGiftImagePath(gift);
@@ -542,7 +560,7 @@ const renderGiftCard = (gift) => {
   priceRow.className = "gift-price-row";
 
   const price = document.createElement("p");
-  price.textContent = formatPrice(gift.valor);
+  price.textContent = getGiftPrice(gift);
 
   const chip = document.createElement("span");
   chip.className = "gift-chip";
@@ -551,8 +569,8 @@ const renderGiftCard = (gift) => {
   const meta = document.createElement("span");
   meta.className = "gift-meta";
   meta.textContent = canUseQuotas(gift)
-    ? "Escolha o valor integral ou uma parcela."
-    : "Pague por Pix ou abra o link da loja.";
+    ? "Escolha O Valor Integral Ou Uma Parcela."
+    : "Pague Por Pix Ou Abra O Link Da Loja.";
 
   const button = document.createElement("button");
   button.className = "gift-button";
@@ -598,11 +616,11 @@ const sortGifts = (gifts) => {
 
 const updateGiftCount = (visibleCount) => {
   const total = allGifts.length;
-  const totalLabel = total === 1 ? "1 presente" : `${total} presentes`;
-  const visibleLabel = visibleCount === 1 ? "1 encontrado" : `${visibleCount} encontrados`;
+  const totalLabel = total === 1 ? "1 Presente" : `${total} Presentes`;
+  const visibleLabel = visibleCount === 1 ? "1 Encontrado" : `${visibleCount} Encontrados`;
 
   giftCount.textContent = totalLabel;
-  resultCount.textContent = `${visibleLabel} de ${totalLabel}`;
+  resultCount.textContent = `${visibleLabel} De ${totalLabel}`;
 };
 
 const renderGiftList = () => {
@@ -618,10 +636,10 @@ const renderGiftList = () => {
 
 const getJsonLoadErrorMessage = () => {
   if (window.location.protocol === "file:") {
-    return "O site foi aberto como arquivo. Use o abrir-site.bat e acesse http://localhost:8000 para carregar presentes.json.";
+    return "O Site Foi Aberto Como Arquivo. Use O abrir-site.bat E Acesse http://localhost:8000 Para Carregar presentes.json.";
   }
 
-  return "Nao foi possivel carregar presentes.json. Confira se o servidor local esta aberto na pasta do site e se o JSON esta valido.";
+  return "Não Foi Possível Carregar presentes.json. Confira Se O Servidor Local Está Aberto Na Pasta Do Site E Se O JSON Está Válido.";
 };
 
 const loadGifts = async () => {
@@ -638,7 +656,7 @@ const loadGifts = async () => {
     });
 
     if (!response.ok) {
-      throw new Error("Nao foi possivel carregar presentes.json");
+      throw new Error("Não Foi Possível Carregar presentes.json");
     }
 
     gifts = await response.json();
@@ -654,7 +672,7 @@ const loadGifts = async () => {
     allGifts = gifts.map(withExampleLinks);
     renderGiftList();
   } catch (error) {
-    emptyState.textContent = "Nao foi possivel carregar a lista de presentes.";
+    emptyState.textContent = "Não Foi Possível Carregar A Lista De Presentes.";
     emptyState.hidden = false;
     console.error(error);
   } finally {

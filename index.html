@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Lista de Presentes | Sarah & Gabriel</title>
+    <title>Lista De Presentes | Sarah & Gabriel</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,14 +19,14 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Sarah e Gabriel">Sarah &amp; Gabriel</a>
+      <a class="brand" href="#" aria-label="Sarah E Gabriel">Sarah &amp; Gabriel</a>
       <label class="search-box" role="search" for="gift-search">
         <span aria-hidden="true">&#x2315;</span>
-        <input id="gift-search" type="search" placeholder="Buscar presente" autocomplete="off" />
+        <input id="gift-search" type="search" placeholder="Buscar Presente" autocomplete="off" />
       </label>
-      <div class="cart-pill" aria-label="Lista de presentes">
+      <div class="cart-pill" aria-label="Lista De Presentes">
         <span aria-hidden="true">&#9825;</span>
-        <span id="gift-count">Lista dos noivos</span>
+        <span id="gift-count">Lista Dos Noivos</span>
       </div>
     </header>
 
@@ -34,16 +34,15 @@
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-inner">
           <p class="hero-kicker">Sarah &amp; Gabriel</p>
-          <h1 id="page-title">Lista de Presentes</h1>
+          <h1 id="page-title">Lista De Presentes</h1>
           <p>
-            Vamos come&ccedil;ar uma nova vida juntos, e cada gesto de carinho torna
-            esse momento ainda mais especial. Sua presen&ccedil;a &eacute; o nosso maior
-            presente, mas se desejar nos aben&ccedil;oar, escolha um item e escaneie o
+            Vamos Come&ccedil;ar Uma Nova Vida Juntos, E Cada Gesto De Carinho Torna
+            Esse Momento Ainda Mais Especial. Sua Presen&ccedil;a &Eacute; O Nosso Maior
+            Presente, Mas Se Desejar Nos Aben&ccedil;oar, Escolha Um Item E Escaneie O
             QR Code.
           </p>
-          <div class="hero-actions" aria-label="Atalhos da lista">
-            <a href="#gift-list">Ver presentes</a>
-            <span>Pix, parcelas ou link de compra</span>
+          <div class="hero-actions" aria-label="Atalhos Da Lista">
+            <a href="#gift-list">Ver Presentes</a>
           </div>
         </div>
       </section>
@@ -51,21 +50,21 @@
       <section class="gift-section" id="gift-list" aria-label="Presentes dispon&iacute;veis">
         <div class="section-heading">
           <div>
-            <p class="section-tag">Presentes mais escolhidos</p>
-            <h2>Escolha com carinho</h2>
+            <p class="section-tag">Presentes Mais Escolhidos</p>
+            <h2>Escolha Com Carinho</h2>
             <p>
-            Cada contribui&ccedil;&atilde;o ajuda a construir nosso lar com amor, cuidado e
-            boas mem&oacute;rias.
+            Cada Contribui&ccedil;&atilde;o Ajuda A Construir Nosso Lar Com Amor, Cuidado E
+            Boas Mem&oacute;rias.
             </p>
           </div>
-          <p class="result-count" id="result-count">Carregando presentes...</p>
+          <p class="result-count" id="result-count">Carregando Presentes...</p>
         </div>
 
-        <div class="gift-toolbar" aria-label="Filtros da lista">
-          <div class="filter-group" id="category-filters" aria-label="Filtrar por categoria">
+        <div class="gift-toolbar" aria-label="Filtros Da Lista">
+          <div class="filter-group" id="category-filters" aria-label="Filtrar Por Categoria">
             <button class="filter-button is-active" type="button" data-category="all">Todos</button>
             <button class="filter-button" type="button" data-category="casa">Casa</button>
-            <button class="filter-button" type="button" data-category="cama-mesa-banho">Cama, mesa e banho</button>
+            <button class="filter-button" type="button" data-category="cama-mesa-banho">Cama, Mesa E Banho</button>
             <button class="filter-button" type="button" data-category="cozinha">Cozinha</button>
             <button class="filter-button" type="button" data-category="lavanderia">Lavanderia</button>
             <button class="filter-button" type="button" data-category="noivos">Noivos</button>
@@ -75,15 +74,15 @@
             <span>Ordenar</span>
             <select id="gift-sort">
               <option value="featured">Destaques</option>
-              <option value="price-asc">Menor valor</option>
-              <option value="price-desc">Maior valor</option>
+              <option value="price-asc">Menor Valor</option>
+              <option value="price-desc">Maior Valor</option>
               <option value="name-asc">Nome A-Z</option>
             </select>
           </label>
         </div>
 
         <p class="empty-state" id="empty-state" hidden>
-          Nenhum presente encontrado.
+          Nenhum Presente Encontrado.
         </p>
 
         <div class="gift-grid" id="gift-grid"></div>
@@ -92,29 +91,29 @@
 
     <dialog class="qr-modal" id="qr-modal" aria-labelledby="modal-title">
       <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
-      <img class="modal-gift-image" id="modal-gift-image" src="assets/gift-box.png" alt="Foto do presente" />
-      <p class="modal-kicker">Checkout do presente</p>
-      <h2 id="modal-title">Nome do presente</h2>
+      <img class="modal-gift-image" id="modal-gift-image" src="assets/gift-box.png" alt="Foto Do Presente" />
+      <p class="modal-kicker">Checkout Do Presente</p>
+      <h2 id="modal-title">Nome Do Presente</h2>
       <p class="modal-price" id="modal-price">R$ 0,00</p>
       <div class="gift-step is-active">
-        <div class="payment-panel" aria-label="Escolha de pagamento">
-          <p class="payment-label">Como deseja presentear?</p>
+        <div class="payment-panel" aria-label="Escolha De Pagamento">
+          <p class="payment-label">Como Deseja Presentear?</p>
           <div class="payment-toggle" id="payment-toggle">
             <button class="payment-option is-selected" type="button" data-payment-mode="full">
-              Valor cheio
+              Valor Cheio
             </button>
             <button class="payment-option" type="button" data-payment-mode="quota">
-              Comprar parcelas
+              Comprar Parcelas
             </button>
             <button class="payment-option" id="link-payment-option" type="button" data-payment-mode="links">
-              Comprar por link
+              Comprar Por Link
             </button>
           </div>
           <div class="quota-picker" id="quota-picker" hidden>
-            <label for="quota-count">Quantidade de parcelas</label>
+            <label for="quota-count">Quantidade De Parcelas</label>
             <div class="quota-dropdown" id="quota-count" data-value="1">
               <button class="quota-dropdown-button" id="quota-count-button" type="button" aria-haspopup="listbox" aria-expanded="false">
-                <span>1 parcela</span>
+                <span>1 Parcela</span>
               </button>
               <div class="quota-dropdown-menu" id="quota-count-menu" role="listbox" aria-labelledby="quota-count-button"></div>
             </div>
@@ -128,15 +127,15 @@
         <div class="store-links" id="store-links" hidden></div>
         <div class="qr-gallery" id="qr-gallery">
           <div class="qr-card">
-            <span>Pagamento unico</span>
+            <span>Pagamento Único</span>
             <div class="qr-frame">
-              <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code do presente" />
+              <img id="modal-qr" src="assets/qrcodes/placeholder.svg" alt="QR Code Do Presente" />
             </div>
             <strong>R$ 0,00</strong>
           </div>
         </div>
         <p class="modal-help" id="modal-help">
-          Escaneie o QR Code para fazer o Pix.
+          Escaneie O QR Code Para Fazer O Pix.
         </p>
       </div>
     </dialog>

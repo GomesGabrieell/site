@@ -329,21 +329,6 @@ textarea {
     border-color 160ms ease;
 }
 
-.gift-card::before {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 1;
-  content: attr(data-badge);
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: rgba(82, 99, 77, 0.94);
-  color: var(--white);
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .gift-card:hover {
   transform: translateY(-3px);
   border-color: rgba(101, 119, 94, 0.42);
@@ -443,9 +428,9 @@ textarea {
 
 .qr-modal {
   position: relative;
-  width: min(780px, calc(100% - 28px));
+  width: min(720px, calc(100% - 28px));
   max-height: calc(100dvh - 28px);
-  padding: 18px;
+  padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
   background:
@@ -456,6 +441,10 @@ textarea {
     0 30px 80px rgba(25, 28, 24, 0.32),
     0 1px 0 rgba(255, 255, 255, 0.88) inset;
   overflow: hidden;
+}
+
+.qr-modal:not([open]) {
+  display: none;
 }
 
 .qr-modal[open] {
@@ -503,9 +492,9 @@ textarea {
 
 .modal-gift-image {
   display: block;
-  width: min(156px, 44vw);
+  width: min(132px, 44vw);
   aspect-ratio: 1 / 0.72;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--green-light);
@@ -523,13 +512,13 @@ textarea {
 .qr-modal h2 {
   margin: 0;
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.18;
   font-weight: 800;
 }
 
 .modal-price {
-  margin: 7px 0 12px;
+  margin: 6px 0 10px;
   color: var(--green-dark);
   font-size: 23px;
   font-weight: 800;
@@ -554,7 +543,7 @@ textarea {
 
 .payment-toggle {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   gap: 8px;
 }
 
@@ -756,16 +745,17 @@ textarea {
 
 .qr-card {
   display: grid;
-  gap: 7px;
+  gap: 9px;
   min-width: 0;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
+  box-shadow: 0 12px 26px rgba(30, 34, 28, 0.08);
 }
 
 .qr-card:only-child {
-  width: min(220px, 100%);
+  width: min(230px, 100%);
   justify-self: center;
 }
 
@@ -780,8 +770,9 @@ textarea {
 
 .qr-card strong {
   color: var(--green-dark);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 900;
+  text-align: center;
 }
 
 .qr-frame {
@@ -790,7 +781,7 @@ textarea {
   width: 100%;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid var(--line);
   background: var(--white);
   border-radius: 6px;
@@ -818,15 +809,17 @@ textarea {
 }
 
 @media (min-width: 700px) {
-  .qr-modal {
+  .qr-modal[open] {
     display: grid;
-    grid-template-columns: 156px minmax(0, 1fr);
+    grid-template-columns: 132px minmax(0, 1fr) 190px;
     grid-template-areas:
-      "image kicker"
-      "image title"
-      "image price"
-      "body body";
-    column-gap: 18px;
+      "image kicker qr"
+      "image title qr"
+      "image price qr"
+      "payment payment qr"
+      "summary summary help"
+      "stores stores stores";
+    gap: 8px 14px;
     align-items: start;
   }
 
@@ -849,11 +842,7 @@ textarea {
   }
 
   .gift-step.is-active {
-    grid-area: body;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 220px;
-    gap: 10px 14px;
-    align-items: start;
+    display: contents;
   }
 
   .payment-panel,
@@ -862,13 +851,27 @@ textarea {
     margin-bottom: 0;
   }
 
+  .payment-panel {
+    grid-area: payment;
+  }
+
+  .order-summary {
+    grid-area: summary;
+  }
+
+  .store-links {
+    grid-area: stores;
+  }
+
   .qr-gallery {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-area: qr;
   }
 
   .modal-help {
-    grid-column: 2;
+    grid-area: help;
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1.35;
     text-align: center;
   }
 }
@@ -1099,6 +1102,10 @@ textarea {
     padding: 20px 16px;
   }
 
+  .qr-gallery {
+    grid-template-columns: 1fr;
+  }
+
   .modal-close {
     top: 8px;
     right: 8px;
@@ -1123,10 +1130,6 @@ textarea {
 
   .quota-picker {
     grid-template-columns: 1fr;
-  }
-
-  .qr-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .modal-help {
